@@ -39,31 +39,6 @@ var Roots = {
   }
 };
 
-var app = angular.module('app', []);
-
-app.run(['$rootScope', function($rootScope){
-  // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope
-  $rootScope.dir = BlogInfo.url;
-  $rootScope.site = BlogInfo.site;
-  $rootScope.api = AppAPI.url;
-}]);
-
-app.controller('PostsCtrl', ['$scope', '$http', function($scope, $http) {
-  // load posts from the WordPress API
-  $http({
-    method: 'GET',
-    url: $scope.api, // derived from the rootScope
-    params: {
-      json: 'get_posts'
-    }
-  }).
-  success(function(data, status, headers, config) {
-    $scope.postdata = data.posts;
-  }).
-  error(function(data, status, headers, config) {
-  });
-}]);
-
 // The routing fires all common scripts, followed by the page specific scripts.
 // Add additional events for more control over timing e.g. a finalize event
 var UTIL = {

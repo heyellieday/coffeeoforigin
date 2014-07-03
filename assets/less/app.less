@@ -8,15 +8,232 @@
    Base
    ========================================================================== */
 
-body { }
+#slideout {
+    z-index:12;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 35px;
+    padding: 12px 0;
+    text-align: center;
+    background: #6DAD53;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+}
+#slideout_inner {
+   overflow-y:auto;
+    z-index:12;
+    position: fixed;
+    background: #6DAD53;
+    width: 400px;
+    padding: 25px;
+    height: 100%;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    text-align: left;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+
+.slideout_in {
+    left: -400px;
+}
+
+.slideout_out {
+    left: 0;
+}
+
+.typekit-badge {
+   display:none !important;
+}
+
+#site-wrapper{
+   background-color:white !important;
+}
+
+html { height:100%; }
+body { height:100%; }
+
+.row {
+   margin-left: 15px;
+   margin-right: 15px;
+}
+
+.btn-outline{
+              padding: 5px 5px 5px 5px;
+           border:2px solid;
+           border-radius:5px;
+}
 
 
+.menu-join{
+   a{
+      .btn-outline;
+      padding-top:5px !important;
+      padding-bottom:5px !important;
+      margin-top:7.5px;
+   }
+}
+
+.nav li a:hover, .nav li a:focus{
+   background-color:transparent;
+}
+
+iframe {
+   width:100%;
+   height:900px;
+   border: 0px;
+}
 
 /* ==========================================================================
    Header
    ========================================================================== */
 
-.banner { }
+.icon-bar{
+   background-color:white;
+   height:4px;
+   width:44px;
+}
+
+.navbar-brand {
+   
+   padding-top:35px;
+}
+
+.navbar-toggle{
+   padding-top:45px;
+   padding-right: 30px;
+            }
+.banner {
+   height:100%;
+   position: relative;
+   border: 1px none transparent;
+   margin-bottom:0px;
+   .headerHome{
+      min-height:600px;
+      z-index: 1;
+      @media screen and (max-width: 500px) { min-height:500px; }
+      .container{
+         .navbar-brand{
+            color:white;
+            padding-top:35px;
+            font-size:2.0em;
+            .headerLogo{
+               height:75px;
+               width:75px;
+            }
+         }
+         nav {
+            padding-top:35px;
+            .navbar-nav{
+               li {
+                  a {
+                     font-size:1.4em;
+                     color:white;
+                  }
+               }
+            }
+         }
+      }
+      .row {
+         .container{
+            .col-sm-12{
+               margin-bottom:25px;
+               .welcomeText{
+                  color:white;
+                  text-align:center;
+                  margin-top: 6em;
+                  @media screen and (max-width: 500px) { margin-top: 2.5em; }
+                  h1 {
+                     @media screen and (max-width: 992px) { font-size:3.5em; }
+                     @media screen and (max-width: 715px) { font-size:2.5em; }
+                     @media screen and (max-width: 415px) { font-size:2.4em; }
+                     font-size:4em;
+                  }
+                  h2{
+                     @media screen and (max-width: 992px) { font-size:3.5em; }
+                     @media screen and (max-width: 715px) { font-size:2.5em; }
+                     @media screen and (max-width: 415px) { font-size:2.2em; }
+                     font-size:4em;
+                     font-weight:300;
+                  }
+                  h3 {
+                     a {
+                        color:@brand-alternate;
+                     }
+                     @media screen and (max-width: 992px) { font-size:1.3em; }
+                  }
+               }
+            }
+         }
+      }
+   }
+   .headerNonHome{
+      background-color:@brand-main;
+      min-height:115px;
+      z-index: 1;
+      .container{
+         .navbar-brand{
+            color:white;
+            padding-top:35px;
+            font-size:2.0em;
+            .headerLogo{
+               height:75px;
+               width:75px;
+            }
+         }
+         nav {
+            padding-top:35px;
+            .navbar-nav{
+               li {
+                  a {
+                     font-size:1.4em;
+                     color:white;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+    .headerHomeOverlay{
+        background-color:#632113;
+        position: absolute;
+        opacity:.5;
+        width:100%;
+        height:100%;
+         top: 0;
+      left: 0;
+        z-index: -1;
+   }
+   .headerHomeBackground{
+      background-image: url(../img/homepage.jpg);
+      background-size: cover;
+      background-position:center;
+      position: absolute;
+        width:100%;
+        height:100%;
+         top: 0;
+      left: 0;
+        z-index:-2;
+   }
+      .secondaryStripe{
+         background-color:@brand-secondary;
+         height:45px;
+      }
+      .alternateStripe{
+         background-color:@brand-alternate;
+         height:45px;
+      }
+ }
 
 
 
@@ -25,6 +242,88 @@ body { }
    ========================================================================== */
 
 .content { }
+
+.welcome {
+   min-height:350px;
+   @media screen and (max-width: 1100px) { min-height:300px; }
+   .headerText{
+      h2 {
+         text-align:center;
+      }
+   }
+   .row {
+      .welcomeText{
+         margin-bottom:25px;
+         img{
+            width:50%;
+            display: table;
+            margin: 0 auto;
+         }
+         h4 {
+         text-align:center;
+         }
+      }
+   }
+   .ctaText{
+      h2{
+         text-align:center;
+         a{
+            color:@brand-alternate;
+         }
+      }
+      padding-bottom:40px;
+      @media screen and (max-width: 1100px) {  padding-bottom:20px; }
+   }
+}
+.amenitiesHome{
+   background-color: @brand-alternate;
+   margin-left: -15px;
+   margin-right: -15px;
+   min-height:200px;
+   @media screen and (max-width: 1500px) {  
+      min-height:200px;
+   }
+   padding-bottom:25px;
+   .row {
+      .amenitiesText{
+         color:white;
+         margin-top:25px;
+         h4, h3, h2{
+            text-align:center;
+         }
+         .moreText{
+            margin-bottom:25px;
+         }
+         a {
+            .btn-outline;
+         color: white;
+
+         }
+      }
+   }
+}
+
+.pricing {
+   min-height:200px;
+   .row {
+      .pricingText{
+         margin-bottom:25px;
+         margin-top:25px;
+         h4, h3, h2{
+            text-align:center;
+         }
+         .moreText{
+            margin-bottom:25px;
+         }
+         a {
+            .btn-outline;
+            color:@brand-alternate;
+            margin-top:30px;
+
+         }
+      }
+   }
+}
 
 
 
@@ -62,8 +361,64 @@ body { }
 /* ==========================================================================
    Footer
    ========================================================================== */
+.content-info {
+   .footerCallToAction {
+        background-color:@brand-main;
+        min-height:150px; 
+        color:white;
+        text-align:center;
+        h2{
+         padding-top:10px;
+         @media screen and (max-width: 450px) {  padding-top:15px; }
+        }
+        h3{
+         a{
+            color:white;
+            .btn-outline;
+            padding-left:20px;
+            padding-right:20px;
 
-.content-info { }
+         }
+        }
+   }
+   .footerMeetsCTA{
+      background-color:@brand-secondary;
+      height:45px;
+   }
+   .mainFooter {
+      background-color:@brand-alternate;
+      min-height:225px;
+      .footerLogo {
+            color:white;
+            padding-top:45px;
+            font-size:2.0em;
+
+            margin: 0 auto;
+            margin-top:25px;
+            @media screen and (max-width: 768px) { margin-top:50px; }
+            display: table;
+            table-layout: fixed;
+            float:none;
+            height:125px;
+            width:125px;
+         }
+      nav {
+         margin: 0 auto;
+         .navbar-nav{
+            margin: 0 auto;
+            display: table;
+            table-layout: fixed;
+            float:none;
+            li {
+               a {
+                  font-size:1.4em;
+                  color:white;
+               }
+            }
+         }
+      }
+   }
+ }
 
 
 
@@ -83,8 +438,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
-
+@media (min-width: @screen-xs-min) { }
 @media (min-width: @screen-md-min) { }
 
-@media (min-width: @screen-lg-min) { }
