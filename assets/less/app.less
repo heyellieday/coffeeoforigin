@@ -8,28 +8,56 @@
    Base
    ========================================================================== */
 
+.skippr {
+position: fixed !important;
+}
+
 #slideout {
     z-index:12;
     position: fixed;
-    top: 40px;
+    top:0;
     left: 0;
-    width: 35px;
-    padding: 12px 0;
     text-align: center;
     background: #6DAD53;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
-    -webkit-border-radius: 0 5px 5px 0;
-    -moz-border-radius: 0 5px 5px 0;
-    border-radius: 0 5px 5px 0;
+    .openSlideout:hover{
+      height:40px;
+
+    }
+    .openSlideout{
+    .openContent{
+      margin:5px;
+    }
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index:12;
+    position: fixed;
+    bottom: 100px;
+    height:35px;
+    text-align: center;
+    background: #F1E38C;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+
+    }
 }
 #slideout_inner {
    overflow-y:auto;
+   background-color:#492F1E;
+   .content{
+    color:#FBEC92;
+   }
     z-index:12;
     position: fixed;
-    background: #6DAD53;
     width: 400px;
     padding: 25px;
     height: 100%;
@@ -38,9 +66,7 @@
     transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     text-align: left;
-    -webkit-border-radius: 0 0 5px 0;
-    -moz-border-radius: 0 0 5px 0;
-    border-radius: 0 0 5px 0;
+    @media screen and (max-width: 450px) { width:300px; }
 }
 
 .slideout_in {
@@ -49,6 +75,15 @@
 
 .slideout_out {
     left: 0;
+}
+
+.slideopen_in {
+    left: 0px;
+}
+
+.slideopen_out {
+    left: 400px;
+    @media screen and (max-width: 450px) { left: 300px; }
 }
 
 .typekit-badge {
@@ -123,6 +158,7 @@ iframe {
       @media screen and (max-width: 500px) { min-height:500px; }
       .container{
          .navbar-brand{
+            z-index:50;
             color:white;
             padding-top:35px;
             font-size:2.0em;

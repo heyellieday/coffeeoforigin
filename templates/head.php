@@ -8,6 +8,7 @@
 
   <?php wp_head(); ?>
   <script src="<?php echo get_template_directory_uri();; ?>/assets/js/vendor/bigSlide.min.js"></script>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri();; ?>/assets/css/jquery.skippr.css">
    <script src="<?php echo get_template_directory_uri();; ?>/assets/js/app.js"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
   
