@@ -1,7 +1,7 @@
 <header ng-controller="PageCtrl" class="banner navbar" role="banner">
   <div id="slider">
                 <div style="background-image: url(<?php echo get_template_directory_uri();; ?>/assets/img/homepage.jpg)"></div>
-                 <div style="background-image: url(<?php echo get_template_directory_uri();; ?>/assets/img/homepage.jpg)"></div>
+                 <div style="background-image: url(<?php echo get_template_directory_uri();; ?>/assets/img/homepage2.jpg)"></div>
                   <div style="background-image: url(<?php echo get_template_directory_uri();; ?>/assets/img/homepage.jpg)"></div>
   </div>
   <?php if( is_front_page() ) { ?>

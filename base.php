@@ -16,6 +16,13 @@
     }
   ?>
 
+  <div class="content row">
+      <div class="main <?php echo roots_main_class(); ?>" role="main">
+        <?php include roots_template_path(); ?>
+      </div><!-- /.main -->
+          </div><!-- /.content -->
+  </div>
+
 <script src="<?php echo get_template_directory_uri();; ?>/assets/js/vendor/jquery.skippr.min.js"></script>
 
 </body>

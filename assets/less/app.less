@@ -8,6 +8,41 @@
    Base
    ========================================================================== */
 
+.main{
+  position: fixed;
+  width:75%;
+  height:70%;
+  top: 20%;
+  left: 50%;
+  margin: 0 auto;
+  background-color:#feefc1;
+  margin: 0 0 0 -37.5%;
+  overflow-y:auto;
+  .product{
+    .images{
+      padding:10px;
+    }
+    .summary{
+      padding:10px;
+    }
+    .cart{
+      .button {
+        background:#492F1E;
+        border:none;
+      }
+      .button:hover {
+        background:#492F1E;
+        border:none;
+      }
+    }
+    .woocommerce-tabs {
+      .panel{
+        background:none;
+      }
+    }
+  }
+}
+
 .skippr {
 position: fixed !important;
 }
@@ -18,7 +53,7 @@ position: fixed !important;
     top:0;
     left: 0;
     text-align: center;
-    background: #6DAD53;
+    background: #feefc1;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -28,25 +63,26 @@ position: fixed !important;
 
     }
     .openSlideout{
-    .openContent{
-      margin:5px;
-    }
-    -webkit-border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    -moz-border-radius-topright: 5px;
-    -moz-border-radius-bottomright: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    z-index:12;
-    position: fixed;
-    bottom: 100px;
-    height:35px;
-    text-align: center;
-    background: #F1E38C;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
+      .openContent{
+        margin:5px;
+      }
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-topright: 5px;
+      -moz-border-radius-bottomright: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      z-index:12;
+      position: fixed;
+      bottom: 100px;
+      height:35px;
+      text-align: center;
+      background: #492F1E;
+      color:white;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
 
     }
 }
@@ -54,7 +90,7 @@ position: fixed !important;
    overflow-y:auto;
    background-color:#492F1E;
    .content{
-    color:#FBEC92;
+    color:#feefc1;
    }
     z-index:12;
     position: fixed;
