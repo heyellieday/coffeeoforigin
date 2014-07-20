@@ -12,7 +12,10 @@ app.controller('PageCtrl', ['$scope', '$http',"$sce", function($scope, $http, $s
 
 $(document).ready(function(){
 
-            $("#slider").skippr();
+            $("#slider").skippr({
+              autoPlay: true,
+              autoPlayDuration: 5000
+            });
                 $scope.$apply(function(){
                $scope.currentPage = "home";
                $http({
@@ -33,9 +36,10 @@ $( ".openSlideout" ).click(function(event) {
 
 $( "#slideout_inner" ).toggleClass( "slideout_out" ).toggleClass("slideout_in");
 $( ".openSlideout" ).toggleClass( "slideopen_out" ).toggleClass("slideopen_in");
+$( ".bestCoffee" ).toggleClass( "slideout_out" ).toggleClass("slideout_in");
 });
 
-$scope.sidePages = {"home": "home", "about": "about", "our-coffee": "our-coffee"};
+$scope.sidePages = {"home": "home", "about": "about", "our-coffee": "our-coffee", "contact": "contact"};
 $scope.currentPage = $scope.sidePages.home;
 
 $.each($scope.sidePages, function(index, value) {
@@ -56,6 +60,7 @@ $.each($scope.sidePages, function(index, value) {
           });
       $( "#slideout_inner" ).addClass( "slideout_out" ).removeClass("slideout_in");
       $( ".openSlideout" ).addClass( "slideopen_out" ).removeClass("slideopen_in");
+      $( ".bestCoffee" ).addClass( "slideout_out" ).removeClass("slideout_in");
     });
 });
 
